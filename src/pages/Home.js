@@ -1,6 +1,7 @@
 // src/pages/Home.js
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';  
 
 export default function Home() {
     return (
@@ -14,12 +15,12 @@ export default function Home() {
                     I’m a game producer, developer, creative collaborator,
                     and storyteller with experience bringing innovative games to life.
                 </p>
-                <a href="/projects" style={{
-                    padding: '1rem 2rem', background: '#00ff9d', color: '#000',
-                    borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold'
-                }}>
-                    See My Projects
-                </a>
+                    <Link to="/projects" style={{
+                        padding: '1rem 2rem', background: '#00ff9d', color: '#000',
+                        borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold'
+                    }}>
+                        See My Work
+                    </Link>
             </main>
             <Footer />
         </div>
