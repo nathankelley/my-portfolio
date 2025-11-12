@@ -1,0 +1,184 @@
+/*
+Images: 
+Background: 
+- https://playearngame.com/wp-content/uploads/2022/02/elden-ring-pc-game-steam-europe-cover.jpg
+- https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/aGhopp3MHppi7kooGE2Dtt8C.png
+
+*/
+
+@font-face {
+    font-family: eldenRingFont;
+    src: url('../fonts/GaramondPremrPro-Smbd.otf');
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('../images/backgrounds/elden-ring-mobile.jpg');
+    background-size: 100% 100%;
+    color: white;
+    font-family: eldenRingFont;
+}
+
+
+/********** HEADER ************/
+header {
+    width: 100%;
+    height: 20%;
+    padding-bottom: 3%;
+}
+
+
+
+/********** NAV ************/
+#nav-list {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+nav li { 
+    display: inline; 
+    font-size: 3vw;
+}
+nav a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+nav li a:hover {background-color: #042329;}
+
+/********** FOOTER ************/
+#footer-info {
+    text-align: center;
+    font-size: 3vw;
+    color: red;
+    border-top: 2px solid black;
+    margin-top: 10%;
+    width: 50%;
+    margin: auto;
+}
+
+#home-intro-wrapper {
+    margin-left: 5%;
+}
+
+/*************    HOME TAB - RATER SECTION   ****************/
+#boss-image-rater > img {
+    width: 60%;
+    transition: all .2s ease-in;
+}
+#boss-image-rater > img:hover {
+    transform: scale(1.1);
+}
+#intro-par {
+    width: 80%;
+}
+
+
+
+/*************    BOSSES TAB   ****************/
+#intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    margin-left: 10%;
+}
+
+
+/*************    BOSSES TAB   ****************/
+#boss-link-list {
+    display: flex;
+    flex-flow: column wrap;
+    width: 60%;
+    margin: auto;
+    padding-top: 5%;
+}
+#boss-link-list img {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    margin: 5%;
+}
+
+
+/*************    BOSS DETAILS PAGE   ****************/
+#boss-details {
+    text-align: center;
+    
+}
+#boss-name {
+    text-shadow: 2px 2px 10px black;
+    font-size: 3vw;
+}
+#details-boss-image > img {
+    width: 50%;
+}
+#details-wrapper {
+    color: white;
+    margin: auto;
+    width: 50%;
+    background-color: rgb(10, 85, 83);
+    padding: 1%;
+}
+
+
+/*************    MEDIA QUERIES   ****************/
+@media only screen and (min-width: 700px) {
+    html, body {
+        height: 100%;
+        max-width: 100%;
+        overflow: visible;
+    }
+    body {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-image: url('../images/backgrounds/aGhopp3MHppi7kooGE2Dtt8C.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+
+    /*************    BOSS IMAGES   ****************/
+    #boss-link-list {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        
+    }
+    .boss-node {
+        width: 200px;
+        margin: 1%;
+    }
+
+    /*************    HOME TAB  ****************/
+    #home-intro-wrapper{
+        display: grid;
+        grid-template-columns: 70% 30%;
+        margin-left: 3%;
+        margin-top: 3%;
+        width: 80%;
+    }
+
+
+    /*************    HOME TAB - RATER SECTION   ****************/
+    #boss-image-rater > img {
+        width: 30%;
+        transition: all .2s ease-in;
+    }
+    #intro-par {
+        width: 100%;
+    }
+    #boss-rater-wrapper{
+        width: 80%;
+        margin-top: 20%;
+    }
+}
