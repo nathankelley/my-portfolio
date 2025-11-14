@@ -1,6 +1,6 @@
 // src/components/ProjectCard.js
 import { useState } from 'react';
-import Lightbox from './components/Lightbox';
+import Lightbox from './Lightbox';
 
 export default function ProjectCard({ title, role, desc, tech, image, link, gallery = [] }) {
     const [isHovered, setIsHovered] = useState(false);

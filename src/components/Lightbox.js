@@ -20,10 +20,10 @@ export default function Lightbox({ images, onClose }) {
             />
             <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem' }}>
                 <button onClick={(e) => { e.stopPropagation(); setIndex(Math.max(0, index - 1)); }}
-                    style={btnStyle} disabled={index === 0}>-</button>
+                    style={btnStyle} disabled={index === 0}>left</button>
                 <span style={{ color: '#fff', fontSize: '1.1rem' }}>{index + 1} / {images.length}</span>
                 <button onClick={(e) => { e.stopPropagation(); setIndex(Math.min(images.length - 1, index + 1)); }}
-                    style={btnStyle} disabled={index === images.length - 1}>+</button>
+                    style={btnStyle} disabled={index === images.length - 1}>right</button>
             </div>
             <button onClick={onClose} style={{ ...btnStyle, marginTop: '1rem', background: '#ff4444' }}>Close</button>
         </div>
