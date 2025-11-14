@@ -6,17 +6,23 @@ export default function ProjectCard({ title, role, desc, tech, image, link, gall
     const [isHovered, setIsHovered] = useState(false);
     const [showLightbox, setShowLightbox] = useState(false);
 
+    const handleCardClick = () => {
+        if (gallery.length > 0) {
+            setShowLightbox(true);
+        }
+    };
+
     return (
         <>
             <div
                 style={{
                     ...styles.card,
                     ...(isHovered ? styles.cardHover : {}),
-                    cursor: gallery?.length > 1 ? 'zoom-in' : 'default'
+                    cursor: gallery.length > 0 ? 'zoom-in' : 'default'
                 }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                onClick={() => gallery?.length > 1 && setShowLightbox(true)}
+                onClick={handleCardClick}  // Dedicated click handler
             >
                 <img src={image} alt={title} style={styles.img} />
                 <div style={styles.content}>
@@ -30,28 +36,25 @@ export default function ProjectCard({ title, role, desc, tech, image, link, gall
                             target="_blank"
                             rel="noopener noreferrer"
                             style={styles.button}
-                            onClick={(e) => e.stopPropagation()}
-                            onMouseEnter={(e) => e.target.style.background = '#00cc7a'}
-                            onMouseLeave={(e) => e.target.style.background = '#00ff9d'}
+                            onClick={(e) => e.stopPropagation()}  // Stops link from blocking card
                         >
                             View Project
                         </a>
                     )}
-                    {gallery?.length > 1 && (
+                    {gallery.length > 0 && (
                         <p style={{
-                            margin: '0.75rem 0 0',
+                            margin: '0.5rem 0 0',
                             color: '#00ff9d',
                             fontSize: '0.85rem',
-                            fontStyle: 'italic',
-                            opacity: 0.8
+                            fontStyle: 'italic'
                         }}>
-                            Click card to view {gallery.length} images
+                            Click to view {gallery.length} images
                         </p>
                     )}
                 </div>
             </div>
 
-            {showLightbox && (
+            {showLightbox && gallery.length > 0 && (
                 <Lightbox images={gallery} onClose={() => setShowLightbox(false)} />
             )}
         </>
