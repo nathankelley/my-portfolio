@@ -1,5 +1,5 @@
 // src/components/ProjectCard.js
-import { useState } from 'react'; }
+import { useState } from 'react';
 
 export default function ProjectCard({ title, role, desc, tech, image, link }) {
     const [isHovered, setIsHovered] = useState(false);
