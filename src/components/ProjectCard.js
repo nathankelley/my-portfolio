@@ -1,38 +1,47 @@
 // src/components/ProjectCard.js
 import { useState } from 'react';
+import Lightbox from './components/Lightbox';
 
-export default function ProjectCard({ title, role, desc, tech, image, link }) {
+export default function ProjectCard({ title, role, desc, tech, image, link, gallery = [] }) {
     const [isHovered, setIsHovered] = useState(false);
+    const [showLightbox, setShowLightbox] = useState(false);
 
     return (
-        <div
-            style={{
-                ...styles.card,
-                ...(isHovered ? styles.cardHover : {})
-            }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            <img src={image} alt={title} style={styles.img} />
-            <div style={styles.content}>
-                <h3 style={styles.title}>{title}</h3>
-                <p><strong>Role:</strong> {role}</p>
-                <p style={{ fontSize: '0.95rem', lineHeight: '1.5', opacity: 0.9 }}>{desc}</p>
-                <p><strong>Tech:</strong> <span style={{ color: '#00ff9d' }}>{tech}</span></p>
-                {link && (
-                    <a
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={styles.button}
-                        onMouseEnter={(e) => e.target.style.background = '#00cc7a'}
-                        onMouseLeave={(e) => e.target.style.background = '#00ff9d'}
-                    >
-                        View Project
-                    </a>
-                )}
+        <>
+            <div
+                style={{
+                    ...styles.card,
+                    ...(isHovered ? styles.cardHover : {}),
+                    cursor: gallery?.length > 1 ? 'zoom-in' : 'default'
+                }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                onClick={() => gallery?.length > 1 && setShowLightbox(true)}
+            >
+                <img src={image} alt={title} style={styles.img} />
+                <div style={styles.content}>
+                    <h3 style={styles.title}>{title}</h3>
+                    <p><strong>Role:</strong> {role}</p>
+                    <p style={{ fontSize: '0.95rem', lineHeight: '1.5', opacity: 0.9 }}>{desc}</p>
+                    <p><strong>Tech:</strong> <span style={{ color: '#00ff9d' }}>{tech}</span></p>
+                    {link && (
+                        <a href={link} target="_blank" rel="noopener noreferrer" style={styles.button}
+                            onClick={(e) => e.stopPropagation()}>
+                            View Project
+                        </a>
+                    )}
+                    {gallery?.length > 1 && (
+                        <p style={{ margin: '0.5rem 0 0', color: '#00ff9d', fontSize: '0.85rem', fontStyle: 'italic' }}>
+                            Click card to view {gallery.length} images
+                        </p>
+                    )}
+                </div>
             </div>
-        </div>
+
+            {showLightbox && (
+                <Lightbox images={gallery} onClose={() => setShowLightbox(false)} />
+            )}
+        </>
     );
 }
 

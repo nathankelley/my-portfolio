@@ -25,6 +25,7 @@ const projects = [
         desc: "Hellbert is a 2D reimagining of the classic arcade game Q*bert. In this version, Hellbert’s mission is to capture as many blocks as possible before they ascend to the heavens.",
         tech: "Unity ~ C# ~ Audacity ~ Perforce",
         image: hellbert_1,
+        gallery: [hellbert_1, hellbert_2, hellbert_3, hellbert_4, hellbert_5],
         link: "https://shaylinkc.itch.io/hellbert"
     },
     {
@@ -33,6 +34,7 @@ const projects = [
         desc: "Find the camouflaged animals as you learn that even the most hidden creatures of this world deserve protection.",
         tech: "Unreal Engine ~ VR ~ C++ ~ Perforce",
         image: remnants_1,
+        gallery: [remnants_1, remnants_2, remnants_3, remnants_4, remnants_5],
         link: "https://shaylinkc.itch.io/hellbert"
     }
 ];
@@ -52,7 +54,11 @@ export default function Projects() {
                     margin: '3rem auto',
                     justifyContent: 'center'
                 }}>
-                    {projects.map(p => <ProjectCard key={p.title} {...p} />)}
+                    {projects.map(p => <ProjectCard key=
+                        {p.title}
+                        {...p}
+                        gallery={p.gallery}
+                    />)}
                 </div>
             </div>
             <Footer />
