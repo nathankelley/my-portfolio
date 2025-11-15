@@ -14,14 +14,14 @@ export default function About() {
                     Nathan Kelley
                 </h1>
                 <p style={{ fontSize: '1.6rem', margin: '0 0 2rem', opacity: 0.9 }}>
-                    <strong>Game Producer</strong> • <em>Master's Candidate in Game Production</em>
+                    <strong>Game Producer</strong> &bull <em>Master's Candidate in Game Production</em>
                 </p>
 
                 {/* Punchy One-Liner */}
                 <p style={{ fontSize: '1.25rem', lineHeight: '1.8', marginBottom: '2.5rem' }}>
                     I'm a game producer, developer, creative collaborator, and storyteller with hands-on experience
                     shipping indie titles like Hellbert (hellish puzzle repairs in Unity) and Remnants (post-apoc survival in Godot).
-                    From scope management to sprint planning, I turn chaotic ideas into polished prototypes — all while pursuing my M.S. in Entertainment Arts & Engineering.
+                    From scope management to sprint planning, I turn chaotic ideas into polished prototypes - all while pursuing my M.S. in Entertainment Arts & Engineering.
                 </p>
 
                 {/* Quick Stats Grid */}
@@ -58,7 +58,7 @@ export default function About() {
                     <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
                         Dive deeper into my experience: QA at MasterControl (bug triage, SQL scripting),
                         lead producer on indie jams, and C++ text adventures from undergrad.
-                        Full details below — let's connect on how I can drive your next project.
+                        Full details below - let's connect on how I can drive your next project.
                     </p>
 
                     {/* Embedded PDF Viewer */}
