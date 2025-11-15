@@ -17,9 +17,9 @@ export default function Footer() {
                         style={socialStyle}>
                         <i className="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://x.com/nathankelley" target="_blank" rel="noopener noreferrer"
+                    <a href="https://x.com/N_JKelley" target="_blank" rel="noopener noreferrer"
                         style={socialStyle}>
-                        <i className="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
                     </a>
                     <a href="https://github.com/nathankelley" target="_blank" rel="noopener noreferrer"
                         style={socialStyle}>
