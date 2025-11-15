@@ -38,7 +38,7 @@ export default function About() {
                         <div>Projects Shipped</div>
                     </div>
                     <div style={statBox}>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>Unity, Unreal Engine, C++, Miro</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#00ff9d' }}>Unity, Unreal Engine, Miro</div>
                         <div>Core Tools</div>
                     </div>
                     <div style={statBox}>
@@ -100,7 +100,8 @@ export default function About() {
 
                 {/* Call to Action */}
                 <p style={{ fontSize: '1.2rem', textAlign: 'center', margin: '3rem 0' }}>
-                    Ready to ship something unforgettable? <Link to="/projects" style={{ color: '#00ff9d' }}>See my work</Link>
+                    Ready to ship something unforgettable?
+                    <Link to="/projects" style={{ color: '#00ff9d' }}>See my work</Link> 
                     or<a href="mailto:kelleyjnathan@gmail.com" style={{ color: '#00ff9d', marginLeft: '1rem' }}>email me</a>.
                 </p>
             </div>

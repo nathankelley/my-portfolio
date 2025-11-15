@@ -22,7 +22,7 @@ const projects = [
     {
         title: "Hell*bert",
         role: "Producer ~ Project Manager ~ Sound Designer",
-        desc: "Hellbert is a 2D reimagining of the classic arcade game Q*bert. In this version, Hellbert’s mission is to capture as many blocks as possible before they ascend to the heavens.",
+        desc: "Hell*bert is a 2D reimagining of the classic arcade game Q*bert. In this version, Hellbert's mission is to capture as many blocks as possible before they ascend to the heavens.",
         tech: "Unity ~ C# ~ Audacity ~ Perforce",
         image: hellbert_1,
         gallery: [hellbert_1, hellbert_2, hellbert_3, hellbert_4, hellbert_5],
@@ -35,7 +35,7 @@ const projects = [
         tech: "Unreal Engine ~ VR ~ C++ ~ Perforce",
         image: remnants_1,
         gallery: [remnants_1, remnants_2, remnants_3, remnants_4, remnants_5],
-        link: "https://shaylinkc.itch.io/hellbert"
+        link: "https://kelley-n.itch.io/remnants"
     }
 ];
 
