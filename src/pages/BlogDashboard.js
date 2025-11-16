@@ -15,7 +15,7 @@ export default function Blog() {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const provider = new GoogleAuthProvider();
-    const [showDenialModal, setShowDenialModal] = useState(false);]
+    const [showDenialModal, setShowDenialModal] = useState(false);
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(setUser);
