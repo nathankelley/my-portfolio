@@ -10,6 +10,8 @@ export default function Header() {
                 <Link to="/" style={styles.link}>Home</Link>
                 <Link to="/about" style={styles.link}>About</Link>
                 <Link to="/projects" style={styles.link}>Projects</Link>
+                <Link to="/blog" style={styles.link}>Blog</Link>
+                <Link to="/blog-dashboard" style={styles.link}>Dashboard</Link>
             </nav>
         </header>
     );
